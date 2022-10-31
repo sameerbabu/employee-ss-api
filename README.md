@@ -40,7 +40,7 @@ If you have deployed this in some other sample server use the server public DNS 
 
 ## #1. Login to generate JWT (token)
 
-```http
+```
   POST /api/v1/user/signin
 ```
 On successful signin returns **token** in the response. This token should be used in all the other APIs as `x-access-token` request header
@@ -82,7 +82,7 @@ curl --location --request GET 'http://localhost:5051/api/v1/employees' \
 
 ## #3. Add employee
 
-```http
+```
   POST /api/v1/employees
 ```
 Add employee to the dataset and return the `emp_id` along with the other details.
