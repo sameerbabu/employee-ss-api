@@ -189,6 +189,9 @@ curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?on_cont
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?group_by=sub_department&on_contract=false' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
+#### Caveat
+
+We are not considering currency and treating salary as just number.
 
 ## Have a question
 
