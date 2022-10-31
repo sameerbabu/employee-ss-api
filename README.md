@@ -24,7 +24,7 @@ This runs the service on port **`5051`**
 ### 2. To Test the service
 Inside the `root directory`  run the following command
 ```
-docker-compose run api-server npm run test
+docker-compose run employee-ss-api npm run test
 ```
 This will log the number of test cases pass/fail in the `console`.
 
