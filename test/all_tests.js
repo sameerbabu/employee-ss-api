@@ -142,6 +142,7 @@ describe("Employees", () => {
       let employee = {
         name: "testuser-1",
         salary: 10000,
+        currency: "USD",
         department: "Software",
         sub_department: "QA",
       };
