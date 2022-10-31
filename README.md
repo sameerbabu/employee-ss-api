@@ -40,7 +40,7 @@ If you have deployed this in some other sample server use the server public DNS 
 
 ## #1. Login to generate JWT (token)
 
-```http
+```
   POST /api/v1/user/signin
 ```
 On successful signin returns **token** in the response. This token should be used in all the other APIs as `x-access-token` request header
@@ -64,7 +64,7 @@ curl --location --request POST 'http://localhost:5051/api/v1/user/signin' \
 
 ## #2. Get list of employees
 
-```http
+```
   GET /api/v1/employees
 ```
 Get the list of all employees, no query parameter filters are honoured. 
@@ -82,7 +82,7 @@ curl --location --request GET 'http://localhost:5051/api/v1/employees' \
 
 ## #3. Add employee
 
-```http
+```
   POST /api/v1/employees
 ```
 Add employee to the dataset and return the `emp_id` along with the other details.
@@ -102,7 +102,7 @@ Add employee to the dataset and return the `emp_id` along with the other details
 | `Content-Type`      | `string` | **Required**. application/json |
 
 #### Sample CURL request
-```http
+```
 curl --location --request POST 'http://localhost:5051/api/v1/employees' \
 --header 'x-access-token: abc.pqr.xyz' \
 --header 'Content-Type: application/json' \
@@ -112,7 +112,7 @@ curl --location --request POST 'http://localhost:5051/api/v1/employees' \
 
 ## #4. Delete employee
 
-```http
+```
   DELETE /api/v1/employees
 ```
 Delete employee from the dataset using the `emp_id` in query parameter.
@@ -127,14 +127,14 @@ Delete employee from the dataset using the `emp_id` in query parameter.
 | `Content-Type`      | `string` | **Required**. application/json |
 
 #### Sample CURL request
-```http
+```
 curl --location --request DELETE 'http://localhost:5051/api/v1/employees?emp_id=preloaded9' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
 
 ## #5. Get SS for salary of employees
 
-```http
+```
   GET /api/v1/employees/ss
 ```
 Get SS for salary of employee from the dataset based on the query parameter. \
@@ -155,37 +155,37 @@ Get SS for salary of employee from the dataset based on the query parameter. \
 | `Content-Type`      | `string` | **Required**. application/json |
 
 #### Sample CURL request for SS of salary of all employees
-```http
+```
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
 
 #### Sample CURL request for SS of salary for each department
-```http
+```
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?group_by=department' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
 
 #### Sample CURL request for SS of salary for each sub_department
-```http
+```
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?group_by=sub_department' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
 
 #### Sample CURL request for SS of salary of employees who satisfy on_contract=true
-```http
+```
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?on_contract=true' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
 
 #### Sample CURL request for SS of salary of employees who satisfy on_contract=false
-```http
+```
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?on_contract=false' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
 
 #### Sample CURL request for SS of salary of employees who satisfy on_contract=false for each sub_department
-```http
+```
 curl --location --request GET 'http://localhost:5051/api/v1/employees/ss?group_by=sub_department&on_contract=false' \
 --header 'x-access-token: abc.pqr.xyz'
 ```
