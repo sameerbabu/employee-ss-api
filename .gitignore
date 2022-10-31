@@ -14,4 +14,7 @@ node_modules/
 # Applications
 *.zip
 
+#database
+*.sqlite3
+
 package-lock.json
