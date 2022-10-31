@@ -92,8 +92,7 @@ exports.list_employees = async (req, res) => {
         exclude: ["id", "created_date_time", "updated_date_time", "createdAt", "updatedAt"],
       },
     });
-    console.log("employees_array")
-    console.log(employees_array)
+    
     //@TODO send pagination details along with response
 
     return sendResponse(res, httpStatus.OK, "ok", employees_array);
