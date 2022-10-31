@@ -6,6 +6,5 @@ WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install --development --silent && mv node_modules ../
 COPY . .
-RUN npm test
 EXPOSE 5051
 CMD ["npm", "start"]
