@@ -21,7 +21,7 @@ if (config.use_env_variable) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-
+db.Employees = require("./employees.model.js")(sequelize, Sequelize);
 db.Users = require("./users.model.js")(sequelize, Sequelize);
 
 /*****

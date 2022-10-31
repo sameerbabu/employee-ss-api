@@ -1,0 +1,9 @@
+// .sequelizerc
+// This file is specific to resolve migration, model, config paths
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('app/config', 'config.json'),
+  'models-path': path.resolve('app', 'models'),
+  'migrations-path': path.resolve('', 'migrations')
+};

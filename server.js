@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 	res.json({ message: "Ok." });
 });
 
-
+require("./app/routes/employees.route.js")(app);
 require("./app/routes/users.route.js")(app);
 
 // set port, listen for requests
